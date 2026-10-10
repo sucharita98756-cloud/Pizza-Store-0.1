@@ -1,0 +1,289 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PizzaHub - Cart</title>
+
+    <link rel="stylesheet" href="cart.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            🍕 PizzaHub
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="#">Offers</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+        </nav>
+
+        <div class="nav-right">
+
+            <button id="cartBtn">
+                🛒 Cart
+                <span id="cartCount">0</span>
+            </button>
+
+            <button id="loginBtn">
+                Login
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= PAGE HEADER ================= -->
+
+    <section class="page-header">
+
+        <p>YOUR SHOPPING CART</p>
+
+        <h1>My Cart 🛒</h1>
+
+        <span>
+            Review your items before checkout.
+        </span>
+
+    </section>
+
+
+    <!-- ================= CART ================= -->
+
+    <main class="cart-section">
+
+        <!-- CART ITEMS -->
+
+        <div class="cart-left">
+
+            <div class="cart-heading">
+
+                <h2>Your Items</h2>
+
+                <span id="itemCount">
+                    0 Items
+                </span>
+
+            </div>
+
+
+            <!-- Items will be inserted by JavaScript -->
+
+            <div id="cartItems">
+            </div>
+
+
+            <!-- EMPTY CART -->
+
+            <div id="emptyCart" class="empty-cart">
+
+                <div class="empty-icon">
+                    🛒
+                </div>
+
+                <h2>Your Cart is Empty</h2>
+
+                <p>
+                    Looks like you haven't added
+                    anything to your cart yet.
+                </p>
+
+                <button id="startShopping">
+                    Start Shopping 🍕
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= ORDER SUMMARY ================= -->
+
+        <aside class="summary">
+
+            <h2>Order Summary</h2>
+
+
+            <div class="summary-row">
+
+                <span>
+                    Subtotal
+                </span>
+
+                <strong id="subtotal">
+                    ₹0
+                </strong>
+
+            </div>
+
+
+            <div class="summary-row">
+
+                <span>
+                    Delivery Fee
+                </span>
+
+                <strong id="deliveryFee">
+                    ₹0
+                </strong>
+
+            </div>
+
+
+            <!-- Coupon -->
+
+            <div class="coupon">
+
+                <input
+                    type="text"
+                    id="couponInput"
+                    placeholder="Coupon Code"
+                >
+
+                <button id="couponBtn">
+                    Apply
+                </button>
+
+            </div>
+
+            <p id="couponMessage"></p>
+
+
+            <div class="summary-row discount-row">
+
+                <span>
+                    Discount
+                </span>
+
+                <strong id="discount">
+                    ₹0
+                </strong>
+
+            </div>
+
+
+            <hr>
+
+
+            <div class="total-row">
+
+                <span>
+                    Total
+                </span>
+
+                <strong id="total">
+                    ₹0
+                </strong>
+
+            </div>
+
+
+            <button
+                id="checkoutBtn"
+                class="checkout-btn"
+            >
+                Proceed to Checkout →
+            </button>
+
+
+            <button
+                id="continueShopping"
+                class="continue-btn"
+            >
+                ← Continue Shopping
+            </button>
+
+
+            <!-- Secure payment -->
+
+            <div class="secure">
+
+                🔒 Secure Checkout
+
+            </div>
+
+        </aside>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+
+                <h2>🍕 PizzaHub</h2>
+
+                <p>
+                    Fresh pizza, fresh happiness.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>Quick Links</h3>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="menu.html">
+                    Menu
+                </a>
+
+                <a href="#">
+                    Offers
+                </a>
+
+            </div>
+
+
+            <div>
+
+                <h3>Contact</h3>
+
+                <p>
+                    📞 +91 9876543210
+                </p>
+
+                <p>
+                    📧 support@pizzahub.com
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 PizzaHub. All Rights Reserved.
+
+        </div>
+
+    </footer>
+
+
+    <script src="cart.js"></script>
+
+</body>
+
+</html>
+```

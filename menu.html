@@ -1,0 +1,857 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PizzaHub - Menu</title>
+
+    <link rel="stylesheet" href="menu.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+   <nav class="navbar">
+
+    <!-- LOGO -->
+    <div class="logo">
+        🍕 PizzaHub
+    </div>
+
+
+    <!-- NAVIGATION -->
+    <div class="nav-links">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="menu.html" class="active">
+            Menu
+        </a>
+
+        <a href="offers.html">
+            Offers
+        </a>
+
+        <a href="about.html">
+            About Us
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+    </div>
+
+
+    <!-- RIGHT SIDE -->
+    <div class="nav-actions">
+
+        <button
+            id="cartBtn"
+            class="cart-btn"
+            onclick="window.location.href='cart.html'">
+
+            🛒 Cart
+            <span id="cartCount">0</span>
+
+        </button>
+
+
+        <button
+            id="loginBtn"
+            class="login-btn"
+            onclick="window.location.href='login.html'">
+
+            Login
+
+        </button>
+
+    </div>
+
+</nav>
+
+
+    <!-- ================= PAGE HEADER ================= -->
+
+    <section class="page-header">
+
+        <p>OUR MENU</p>
+
+        <h1>Choose Your Favourite Pizza 🍕</h1>
+
+        <span>
+            Freshly prepared with love and the finest ingredients.
+        </span>
+
+    </section>
+
+
+    <!-- ================= FILTER SECTION ================= -->
+
+    <section class="filter-section">
+
+        <!-- Search -->
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search pizza..."
+            >
+
+            <button id="searchButton">
+                🔍
+            </button>
+
+        </div>
+
+
+        <!-- Category -->
+
+        <div class="filter-group">
+
+            <label>Category</label>
+
+            <select id="categoryFilter">
+
+                <option value="all">All</option>
+
+                <option value="classic">
+                    Classic
+                </option>
+
+                <option value="premium">
+                    Premium
+                </option>
+
+                <option value="special">
+                    Special
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- Type -->
+
+        <div class="filter-group">
+
+            <label>Type</label>
+
+            <select id="typeFilter">
+
+                <option value="all">
+                    All
+                </option>
+
+                <option value="veg">
+                    🟢 Veg
+                </option>
+
+                <option value="nonveg">
+                    🔴 Non-Veg
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- Sort -->
+
+        <div class="filter-group">
+
+            <label>Sort By</label>
+
+            <select id="sortFilter">
+
+                <option value="default">
+                    Default
+                </option>
+
+                <option value="low">
+                    Price: Low to High
+                </option>
+
+                <option value="high">
+                    Price: High to Low
+                </option>
+
+                <option value="name">
+                    Name: A-Z
+                </option>
+
+            </select>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PIZZA SECTION ================= -->
+
+    <main class="menu-section">
+
+        <div class="menu-top">
+
+            <h2>All Pizzas</h2>
+
+            <span id="resultCount">
+                8 pizzas
+            </span>
+
+        </div>
+
+
+        <div class="pizza-grid" id="pizzaContainer">
+
+
+            <!-- Pizza 1 -->
+
+            <div
+                class="pizza-card"
+                data-name="Margherita Pizza"
+                data-category="classic"
+                data-type="veg"
+                data-price="299"
+            >
+
+                <div class="pizza-image">
+                    🍕
+                </div>
+
+                <div class="pizza-content">
+
+                    <span class="veg-tag">
+                        🟢 VEG
+                    </span>
+
+                    <h3>Margherita Pizza</h3>
+
+                    <p>
+                        Classic pizza with fresh tomato,
+                        mozzarella cheese and basil.
+                    </p>
+
+                    <div class="size-section">
+
+                        <label>Size:</label>
+
+                        <select class="size-select">
+
+                            <option value="Small">
+                                Small
+                            </option>
+
+                            <option value="Medium" selected>
+                                Medium
+                            </option>
+
+                            <option value="Large">
+                                Large
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="pizza-bottom">
+
+                        <strong class="price">
+                            ₹299
+                        </strong>
+
+                        <button
+                            class="add-cart"
+                            data-name="Margherita Pizza"
+                            data-price="299"
+                        >
+                            + Add
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Pizza 2 -->
+
+            <div
+                class="pizza-card"
+                data-name="Farmhouse Pizza"
+                data-category="classic"
+                data-type="veg"
+                data-price="399"
+            >
+
+                <div class="pizza-image">
+                    🍕
+                </div>
+
+                <div class="pizza-content">
+
+                    <span class="veg-tag">
+                        🟢 VEG
+                    </span>
+
+                    <h3>Farmhouse Pizza</h3>
+
+                    <p>
+                        Onion, capsicum, tomato,
+                        mushrooms and cheese.
+                    </p>
+
+                    <div class="size-section">
+
+                        <label>Size:</label>
+
+                        <select class="size-select">
+
+                            <option value="Small">
+                                Small
+                            </option>
+
+                            <option value="Medium" selected>
+                                Medium
+                            </option>
+
+                            <option value="Large">
+                                Large
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="pizza-bottom">
+
+                        <strong class="price">
+                            ₹399
+                        </strong>
+
+                        <button
+                            class="add-cart"
+                            data-name="Farmhouse Pizza"
+                            data-price="399"
+                        >
+                            + Add
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Pizza 3 -->
+
+            <div
+                class="pizza-card"
+                data-name="Cheese Burst Pizza"
+                data-category="premium"
+                data-type="veg"
+                data-price="449"
+            >
+
+                <div class="pizza-image">
+                    🧀🍕
+                </div>
+
+                <div class="pizza-content">
+
+                    <span class="veg-tag">
+                        🟢 VEG
+                    </span>
+
+                    <h3>Cheese Burst Pizza</h3>
+
+                    <p>
+                        Extra cheese with delicious
+                        cheese burst crust.
+                    </p>
+
+                    <div class="size-section">
+
+                        <label>Size:</label>
+
+                        <select class="size-select">
+
+                            <option value="Small">
+                                Small
+                            </option>
+
+                            <option value="Medium" selected>
+                                Medium
+                            </option>
+
+                            <option value="Large">
+                                Large
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="pizza-bottom">
+
+                        <strong class="price">
+                            ₹449
+                        </strong>
+
+                        <button
+                            class="add-cart"
+                            data-name="Cheese Burst Pizza"
+                            data-price="449"
+                        >
+                            + Add
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Pizza 4 -->
+
+            <div
+                class="pizza-card"
+                data-name="Veggie Supreme"
+                data-category="premium"
+                data-type="veg"
+                data-price="429"
+            >
+
+                <div class="pizza-image">
+                    🫑🍕
+                </div>
+
+                <div class="pizza-content">
+
+                    <span class="veg-tag">
+                        🟢 VEG
+                    </span>
+
+                    <h3>Veggie Supreme</h3>
+
+                    <p>
+                        Loaded with fresh vegetables,
+                        olives and mozzarella.
+                    </p>
+
+                    <div class="size-section">
+
+                        <label>Size:</label>
+
+                        <select class="size-select">
+
+                            <option value="Small">
+                                Small
+                            </option>
+
+                            <option value="Medium" selected>
+                                Medium
+                            </option>
+
+                            <option value="Large">
+                                Large
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="pizza-bottom">
+
+                        <strong class="price">
+                            ₹429
+                        </strong>
+
+                        <button
+                            class="add-cart"
+                            data-name="Veggie Supreme"
+                            data-price="429"
+                        >
+                            + Add
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Pizza 5 -->
+
+            <div
+                class="pizza-card"
+                data-name="Chicken Tikka Pizza"
+                data-category="premium"
+                data-type="nonveg"
+                data-price="499"
+            >
+
+                <div class="pizza-image">
+                    🍗🍕
+                </div>
+
+                <div class="pizza-content">
+
+                    <span class="nonveg-tag">
+                        🔴 NON-VEG
+                    </span>
+
+                    <h3>Chicken Tikka Pizza</h3>
+
+                    <p>
+                        Spicy chicken tikka with
+                        cheese and fresh vegetables.
+                    </p>
+
+                    <div class="size-section">
+
+                        <label>Size:</label>
+
+                        <select class="size-select">
+
+                            <option value="Small">
+                                Small
+                            </option>
+
+                            <option value="Medium" selected>
+                                Medium
+                            </option>
+
+                            <option value="Large">
+                                Large
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="pizza-bottom">
+
+                        <strong class="price">
+                            ₹499
+                        </strong>
+
+                        <button
+                            class="add-cart"
+                            data-name="Chicken Tikka Pizza"
+                            data-price="499"
+                        >
+                            + Add
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Pizza 6 -->
+
+            <div
+                class="pizza-card"
+                data-name="Chicken Pepperoni"
+                data-category="special"
+                data-type="nonveg"
+                data-price="549"
+            >
+
+                <div class="pizza-image">
+                    🍕🍗
+                </div>
+
+                <div class="pizza-content">
+
+                    <span class="nonveg-tag">
+                        🔴 NON-VEG
+                    </span>
+
+                    <h3>Chicken Pepperoni</h3>
+
+                    <p>
+                        Delicious chicken pepperoni
+                        with mozzarella cheese.
+                    </p>
+
+                    <div class="size-section">
+
+                        <label>Size:</label>
+
+                        <select class="size-select">
+
+                            <option value="Small">
+                                Small
+                            </option>
+
+                            <option value="Medium" selected>
+                                Medium
+                            </option>
+
+                            <option value="Large">
+                                Large
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="pizza-bottom">
+
+                        <strong class="price">
+                            ₹549
+                        </strong>
+
+                        <button
+                            class="add-cart"
+                            data-name="Chicken Pepperoni"
+                            data-price="549"
+                        >
+                            + Add
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Pizza 7 -->
+
+            <div
+                class="pizza-card"
+                data-name="Mexican Green Wave"
+                data-category="special"
+                data-type="veg"
+                data-price="449"
+            >
+
+                <div class="pizza-image">
+                    🌶️🍕
+                </div>
+
+                <div class="pizza-content">
+
+                    <span class="veg-tag">
+                        🟢 VEG
+                    </span>
+
+                    <h3>Mexican Green Wave</h3>
+
+                    <p>
+                        Spicy Mexican sauce, capsicum,
+                        onion and cheese.
+                    </p>
+
+                    <div class="size-section">
+
+                        <label>Size:</label>
+
+                        <select class="size-select">
+
+                            <option value="Small">
+                                Small
+                            </option>
+
+                            <option value="Medium" selected>
+                                Medium
+                            </option>
+
+                            <option value="Large">
+                                Large
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="pizza-bottom">
+
+                        <strong class="price">
+                            ₹449
+                        </strong>
+
+                        <button
+                            class="add-cart"
+                            data-name="Mexican Green Wave"
+                            data-price="449"
+                        >
+                            + Add
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Pizza 8 -->
+
+            <div
+                class="pizza-card"
+                data-name="BBQ Chicken Pizza"
+                data-category="special"
+                data-type="nonveg"
+                data-price="599"
+            >
+
+                <div class="pizza-image">
+                    🍗🍕
+                </div>
+
+                <div class="pizza-content">
+
+                    <span class="nonveg-tag">
+                        🔴 NON-VEG
+                    </span>
+
+                    <h3>BBQ Chicken Pizza</h3>
+
+                    <p>
+                        BBQ chicken, onions and
+                        mozzarella cheese.
+                    </p>
+
+                    <div class="size-section">
+
+                        <label>Size:</label>
+
+                        <select class="size-select">
+
+                            <option value="Small">
+                                Small
+                            </option>
+
+                            <option value="Medium" selected>
+                                Medium
+                            </option>
+
+                            <option value="Large">
+                                Large
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="pizza-bottom">
+
+                        <strong class="price">
+                            ₹599
+                        </strong>
+
+                        <button
+                            class="add-cart"
+                            data-name="BBQ Chicken Pizza"
+                            data-price="599"
+                        >
+                            + Add
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- No Result -->
+
+        <div id="noResult" class="no-result">
+
+            <h2>🍕 No Pizza Found</h2>
+
+            <p>
+                Try another search or filter.
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+                <h2>🍕 PizzaHub</h2>
+
+                <p>
+                    Fresh pizza, fresh happiness.
+                </p>
+            </div>
+
+
+            <div>
+                <h3>Quick Links</h3>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="menu.html">
+                    Menu
+                </a>
+
+                <a href="#">
+                    Offers
+                </a>
+
+            </div>
+
+
+            <div>
+
+                <h3>Contact</h3>
+
+                <p>📞 +91 9876543210</p>
+
+                <p>
+                    📧 support@pizzahub.com
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 PizzaHub. All Rights Reserved.
+
+        </div>
+
+    </footer>
+
+
+    <script src="menu.js"></script>
+
+</body>
+
+</html>
+```

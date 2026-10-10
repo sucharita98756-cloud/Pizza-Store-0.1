@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>PizzaHub - Checkout</title>
+
+    <link rel="stylesheet" href="checkout.css">
+
+</head>
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            🍕 PizzaHub
+        </div>
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="menu.html">
+                Menu
+            </a>
+
+            <a href="cart.html">
+                Cart
+            </a>
+
+        </nav>
+
+        <div class="nav-right">
+
+            <button id="cartBtn">
+
+                🛒 Cart
+
+                <span id="cartCount">
+                    0
+                </span>
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= PAGE HEADER ================= -->
+
+    <section class="page-header">
+
+        <h1>
+            Checkout
+        </h1>
+
+        <p>
+            Complete your order and enjoy your pizza 🍕
+        </p>
+
+    </section>
+
+
+    <!-- ================= CHECKOUT ================= -->
+
+    <main class="checkout-container">
+
+
+        <!-- ================= LEFT SIDE ================= -->
+
+        <div class="checkout-left">
+
+
+            <!-- CUSTOMER INFORMATION -->
+
+            <section class="checkout-box">
+
+                <h2>
+                    👤 Customer Information
+                </h2>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="name">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Enter your full name"
+                        >
+
+                        <small id="nameError"></small>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="phone">
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            placeholder="Enter 10-digit phone"
+                            maxlength="10"
+                        >
+
+                        <small id="phoneError"></small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                    >
+
+                    <small id="emailError"></small>
+
+                </div>
+
+            </section>
+
+
+            <!-- DELIVERY ADDRESS -->
+
+            <section class="checkout-box">
+
+                <h2>
+                    📍 Delivery Address
+                </h2>
+
+
+                <div class="form-group">
+
+                    <label for="address">
+                        House / Flat / Street
+                    </label>
+
+                    <textarea
+                        id="address"
+                        rows="3"
+                        placeholder="Enter your complete address"
+                    ></textarea>
+
+                    <small id="addressError"></small>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="city">
+                            City
+                        </label>
+
+                        <input
+                            type="text"
+                            id="city"
+                            placeholder="Enter city"
+                        >
+
+                        <small id="cityError"></small>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="pincode">
+                            PIN Code
+                        </label>
+
+                        <input
+                            type="text"
+                            id="pincode"
+                            placeholder="6-digit PIN"
+                            maxlength="6"
+                        >
+
+                        <small id="pincodeError"></small>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- PAYMENT -->
+
+            <section class="checkout-box">
+
+                <h2>
+                    💳 Payment Method
+                </h2>
+
+
+                <div class="payment-options">
+
+
+                    <!-- COD -->
+
+                    <label class="payment-card">
+
+                        <input
+                            type="radio"
+                            name="payment"
+                            value="COD"
+                            checked
+                        >
+
+                        <div>
+
+                            <strong>
+                                💵 Cash on Delivery
+                            </strong>
+
+                            <p>
+                                Pay when your order arrives.
+                            </p>
+
+                        </div>
+
+                    </label>
+
+
+                    <!-- UPI -->
+
+                    <label class="payment-card">
+
+                        <input
+                            type="radio"
+                            name="payment"
+                            value="UPI"
+                        >
+
+                        <div>
+
+                            <strong>
+                                📱 UPI
+                            </strong>
+
+                            <p>
+                                Google Pay / PhonePe / Paytm
+                            </p>
+
+                        </div>
+
+                    </label>
+
+
+                    <!-- CARD -->
+
+                    <label class="payment-card">
+
+                        <input
+                            type="radio"
+                            name="payment"
+                            value="CARD"
+                        >
+
+                        <div>
+
+                            <strong>
+                                💳 Credit / Debit Card
+                            </strong>
+
+                            <p>
+                                Pay securely using your card.
+                            </p>
+
+                        </div>
+
+                    </label>
+
+                </div>
+
+            </section>
+
+
+            <!-- SPECIAL INSTRUCTION -->
+
+            <section class="checkout-box">
+
+                <h2>
+                    📝 Special Instructions
+                </h2>
+
+                <textarea
+                    id="instructions"
+                    rows="3"
+                    placeholder="Example: Please make the pizza less spicy."
+                ></textarea>
+
+            </section>
+
+        </div>
+
+
+        <!-- ================= RIGHT SIDE ================= -->
+
+        <aside class="order-summary">
+
+            <h2>
+                Your Order
+            </h2>
+
+
+            <!-- ITEMS -->
+
+            <div id="checkoutItems">
+
+                <!-- JavaScript will load items here -->
+
+            </div>
+
+
+            <!-- PRICE -->
+
+            <div class="price-details">
+
+                <div>
+
+                    <span>
+                        Subtotal
+                    </span>
+
+                    <span id="subtotal">
+                        ₹0
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Delivery Fee
+                    </span>
+
+                    <span id="deliveryFee">
+                        ₹0
+                    </span>
+
+                </div>
+
+
+                <div id="discountRow"
+                    class="discount-row hidden">
+
+                    <span>
+                        Discount
+                    </span>
+
+                    <span id="discount">
+                        -₹0
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- TOTAL -->
+
+            <div class="total-row">
+
+                <span>
+                    Total
+                </span>
+
+                <span id="total">
+                    ₹0
+                </span>
+
+            </div>
+
+
+            <!-- PLACE ORDER -->
+
+            <button
+                id="placeOrderBtn"
+                class="place-order-btn">
+
+                Place Order 🍕
+
+            </button>
+
+
+            <button
+                id="backToCartBtn"
+                class="back-cart-btn">
+
+                ← Back to Cart
+
+            </button>
+
+
+            <div class="secure-text">
+
+                🔒 Secure Checkout
+
+            </div>
+
+        </aside>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-content">
+
+
+            <div>
+
+                <h2>
+                    🍕 PizzaHub
+                </h2>
+
+                <p>
+                    Fresh pizza, fresh happiness.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="menu.html">
+                    Menu
+                </a>
+
+                <a href="cart.html">
+                    Cart
+                </a>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Contact
+                </h3>
+
+                <p>
+                    📞 +91 9876543210
+                </p>
+
+                <p>
+                    📧 support@pizzahub.com
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 PizzaHub. All Rights Reserved.
+
+        </div>
+
+    </footer>
+
+
+    <script src="checkout.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,498 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PizzaHub - Product Details</title>
+
+    <link rel="stylesheet" href="product.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            🍕 PizzaHub
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="#">Offers</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+        </nav>
+
+        <div class="nav-right">
+
+            <button id="cartBtn">
+                🛒 Cart
+                <span id="cartCount">0</span>
+            </button>
+
+            <button id="loginBtn">
+                Login
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= BREADCRUMB ================= -->
+
+    <div class="breadcrumb">
+
+        <a href="index.html">Home</a>
+
+        <span>›</span>
+
+        <a href="menu.html">Menu</a>
+      
+
+        <span>›</span>
+
+        <span>Product Details</span>
+
+    </div>
+
+
+    <!-- ================= PRODUCT DETAILS ================= -->
+
+    <main class="product-section">
+
+
+        <!-- PRODUCT IMAGE -->
+
+        <div class="product-image-section">
+
+            <div class="main-image">
+                🍕
+            </div>
+
+            <div class="image-label">
+                Freshly Baked
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT INFORMATION -->
+
+        <div class="product-info">
+
+            <span class="veg-tag">
+                🟢 VEG
+            </span>
+
+
+            <h1 id="productName">
+                Margherita Pizza
+            </h1>
+
+
+            <!-- Rating -->
+
+            <div class="rating">
+
+                <span class="stars">
+                    ★★★★★
+                </span>
+
+                <span>
+                    4.8 (125 Reviews)
+                </span>
+
+            </div>
+
+
+            <!-- Price -->
+
+            <div class="price-section">
+
+                <span id="productPrice">
+                    ₹299
+                </span>
+
+                <del>
+                    ₹349
+                </del>
+
+                <span class="discount">
+                    14% OFF
+                </span>
+
+            </div>
+
+
+            <!-- Description -->
+
+            <p class="description">
+
+                A classic Italian favourite made with
+                fresh tomato sauce, mozzarella cheese
+                and aromatic basil. Our Margherita Pizza
+                is freshly prepared and baked to perfection.
+
+            </p>
+
+
+            <!-- Ingredients -->
+
+            <div class="ingredients">
+
+                <h3>Ingredients</h3>
+
+                <div class="ingredient-list">
+
+                    <span>🍅 Fresh Tomato</span>
+
+                    <span>🧀 Mozzarella</span>
+
+                    <span>🌿 Basil</span>
+
+                    <span>🥫 Tomato Sauce</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- SIZE -->
+
+            <div class="option-section">
+
+                <h3>Select Size</h3>
+
+                <div class="size-options">
+
+                    <label>
+
+                        <input
+                            type="radio"
+                            name="size"
+                            value="Small"
+                            data-price="249"
+                        >
+
+                        <span>
+                            Small
+                            <br>
+                            ₹249
+                        </span>
+
+                    </label>
+
+
+                    <label class="selected">
+
+                        <input
+                            type="radio"
+                            name="size"
+                            value="Medium"
+                            data-price="299"
+                            checked
+                        >
+
+                        <span>
+                            Medium
+                            <br>
+                            ₹299
+                        </span>
+
+                    </label>
+
+
+                    <label>
+
+                        <input
+                            type="radio"
+                            name="size"
+                            value="Large"
+                            data-price="399"
+                        >
+
+                        <span>
+                            Large
+                            <br>
+                            ₹399
+                        </span>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- TOPPINGS -->
+
+            <div class="option-section">
+
+                <h3>
+                    Extra Toppings
+                    <small>(Optional)</small>
+                </h3>
+
+
+                <div class="toppings">
+
+                    <label>
+
+                        <input
+                            type="checkbox"
+                            class="topping"
+                            value="Extra Cheese"
+                            data-price="50"
+                        >
+
+                        <span>
+                            Extra Cheese
+                        </span>
+
+                        <strong>
+                            +₹50
+                        </strong>
+
+                    </label>
+
+
+                    <label>
+
+                        <input
+                            type="checkbox"
+                            class="topping"
+                            value="Mushroom"
+                            data-price="40"
+                        >
+
+                        <span>
+                            Mushroom
+                        </span>
+
+                        <strong>
+                            +₹40
+                        </strong>
+
+                    </label>
+
+
+                    <label>
+
+                        <input
+                            type="checkbox"
+                            class="topping"
+                            value="Olives"
+                            data-price="30"
+                        >
+
+                        <span>
+                            Olives
+                        </span>
+
+                        <strong>
+                            +₹30
+                        </strong>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUANTITY -->
+
+            <div class="quantity-section">
+
+                <h3>Quantity</h3>
+
+                <div class="quantity-box">
+
+                    <button id="minusBtn">
+                        −
+                    </button>
+
+                    <span id="quantity">
+                        1
+                    </span>
+
+                    <button id="plusBtn">
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- TOTAL -->
+
+            <div class="total-section">
+
+                <span>
+                    Total Price
+                </span>
+
+                <strong id="totalPrice">
+                    ₹299
+                </strong>
+
+            </div>
+
+
+            <!-- BUTTONS -->
+
+            <div class="action-buttons">
+
+                <button
+                    class="add-cart-btn"
+                    id="addCartBtn"
+                >
+                    🛒 Add to Cart
+                </button>
+
+                <button
+                    class="buy-now-btn"
+                    id="buyNowBtn"
+                >
+                    Buy Now
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= EXTRA INFORMATION ================= -->
+
+    <section class="product-features">
+
+        <div>
+
+            <span>🔥</span>
+
+            <h3>Freshly Baked</h3>
+
+            <p>
+                Prepared fresh after your order.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <span>🚚</span>
+
+            <h3>Fast Delivery</h3>
+
+            <p>
+                Hot and fresh at your doorstep.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <span>🥬</span>
+
+            <h3>Quality Ingredients</h3>
+
+            <p>
+                Fresh and premium ingredients.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <span>🔒</span>
+
+            <h3>Secure Payment</h3>
+
+            <p>
+                Safe and secure checkout.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+
+                <h2>🍕 PizzaHub</h2>
+
+                <p>
+                    Fresh pizza, fresh happiness.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>Quick Links</h3>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="menu.html">
+                    Menu
+                </a>
+
+                <a href="#">
+                    Offers
+                </a>
+
+            </div>
+
+
+            <div>
+
+                <h3>Contact</h3>
+
+                <p>📞 +91 9876543210</p>
+
+                <p>
+                    📧 support@pizzahub.com
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 PizzaHub. All Rights Reserved.
+
+        </div>
+
+    </footer>
+
+
+    <script src="product.js"></script>
+
+</body>
+
+</html>
+```

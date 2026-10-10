@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>PizzaHub - Order Tracking</title>
+
+    <link rel="stylesheet"
+        href="order-tracking.css">
+
+</head>
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            🍕 PizzaHub
+        </div>
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="menu.html">
+                Menu
+            </a>
+
+            <a href="cart.html">
+                Cart
+            </a>
+
+        </nav>
+
+        <div class="nav-right">
+
+            <button id="cartBtn">
+
+                🛒 Cart
+
+                <span id="cartCount">
+                    0
+                </span>
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= PAGE HEADER ================= -->
+
+    <section class="page-header">
+
+        <h1>
+            Track Your Order
+        </h1>
+
+        <p>
+            Follow your pizza from our kitchen
+            to your doorstep 🍕
+        </p>
+
+    </section>
+
+
+    <!-- ================= TRACKING SECTION ================= -->
+
+    <main class="tracking-container">
+
+
+        <!-- ORDER NOT FOUND -->
+
+        <section
+            id="noOrder"
+            class="no-order">
+
+            <div class="empty-icon">
+                🍕
+            </div>
+
+            <h2>
+                No Order Found
+            </h2>
+
+            <p>
+                You haven't placed any order yet.
+            </p>
+
+            <button
+                id="shopNowBtn">
+
+                Order Pizza
+
+            </button>
+
+        </section>
+
+
+        <!-- ORDER CONTENT -->
+
+        <section
+            id="orderContent"
+            class="order-content">
+
+
+            <!-- ORDER HEADER -->
+
+            <div class="order-header">
+
+                <div>
+
+                    <h2>
+                        Order #<span id="orderId">
+                        </span>
+                    </h2>
+
+                    <p id="orderDate">
+                    </p>
+
+                </div>
+
+
+                <div class="order-total">
+
+                    <span>
+                        Total
+                    </span>
+
+                    <strong id="orderTotal">
+                        ₹0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= STATUS ================= -->
+
+            <section class="status-box">
+
+                <h2>
+                    Order Status
+                </h2>
+
+
+                <div class="status-tracker">
+
+
+                    <!-- STEP 1 -->
+
+                    <div
+                        class="status-step active"
+                        id="step1">
+
+                        <div class="status-circle">
+                            ✓
+                        </div>
+
+                        <h3>
+                            Order Placed
+                        </h3>
+
+                        <p>
+                            We received your order
+                        </p>
+
+                    </div>
+
+
+                    <div class="status-line active"
+                        id="line1">
+                    </div>
+
+
+                    <!-- STEP 2 -->
+
+                    <div
+                        class="status-step"
+                        id="step2">
+
+                        <div class="status-circle">
+                            🍳
+                        </div>
+
+                        <h3>
+                            Preparing
+                        </h3>
+
+                        <p>
+                            Your pizza is being prepared
+                        </p>
+
+                    </div>
+
+
+                    <div class="status-line"
+                        id="line2">
+                    </div>
+
+
+                    <!-- STEP 3 -->
+
+                    <div
+                        class="status-step"
+                        id="step3">
+
+                        <div class="status-circle">
+                            🛵
+                        </div>
+
+                        <h3>
+                            Out for Delivery
+                        </h3>
+
+                        <p>
+                            Your order is on the way
+                        </p>
+
+                    </div>
+
+
+                    <div class="status-line"
+                        id="line3">
+                    </div>
+
+
+                    <!-- STEP 4 -->
+
+                    <div
+                        class="status-step"
+                        id="step4">
+
+                        <div class="status-circle">
+                            🏠
+                        </div>
+
+                        <h3>
+                            Delivered
+                        </h3>
+
+                        <p>
+                            Enjoy your pizza!
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= MAIN GRID ================= -->
+
+            <div class="tracking-grid">
+
+
+                <!-- CUSTOMER DETAILS -->
+
+                <section class="details-box">
+
+                    <h2>
+                        📍 Delivery Details
+                    </h2>
+
+                    <div class="detail-item">
+
+                        <strong>
+                            Customer
+                        </strong>
+
+                        <span id="customerName">
+                        </span>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <strong>
+                            Phone
+                        </strong>
+
+                        <span id="customerPhone">
+                        </span>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <strong>
+                            Address
+                        </strong>
+
+                        <span id="customerAddress">
+                        </span>
+
+                    </div>
+
+
+                    <div class="detail-item">
+
+                        <strong>
+                            Payment
+                        </strong>
+
+                        <span id="paymentMethod">
+                        </span>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ORDER ITEMS -->
+
+                <section class="details-box">
+
+                    <h2>
+                        🍕 Order Items
+                    </h2>
+
+                    <div id="orderItems">
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+            <!-- ================= ACTIONS ================= -->
+
+            <div class="actions">
+
+                <button
+                    id="continueShoppingBtn"
+                    class="primary-btn">
+
+                    Continue Shopping
+
+                </button>
+
+                <button
+                    id="backHomeBtn"
+                    class="secondary-btn">
+
+                    Back to Home
+
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-content">
+
+
+            <div>
+
+                <h2>
+                    🍕 PizzaHub
+                </h2>
+
+                <p>
+                    Fresh pizza, fresh happiness.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="menu.html">
+                    Menu
+                </a>
+
+                <a href="cart.html">
+                    Cart
+                </a>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Contact
+                </h3>
+
+                <p>
+                    📞 +91 9876543210
+                </p>
+
+                <p>
+                    📧 support@pizzahub.com
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 PizzaHub. All Rights Reserved.
+
+        </div>
+
+    </footer>
+
+
+    <script src="order-tracking.js"></script>
+
+</body>
+
+</html>

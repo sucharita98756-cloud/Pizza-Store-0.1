@@ -1,0 +1,440 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PizzaHub - Fresh & Delicious Pizza</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            🍕 PizzaHub
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="#">Offers</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+        </nav>
+
+        <div class="nav-right">
+            <button id="searchBtn">🔍</button>
+            <button id="cartBtn">🛒 <span id="cartCount">0</span></button>
+            <button id="loginBtn">Login</button>
+        </div>
+
+    </header>
+
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-title">WELCOME TO PIZZAHUB</p>
+
+            <h1>
+                Fresh Pizza,
+                <span>Fresh Happiness!</span>
+            </h1>
+
+            <p>
+                Delicious, hot and freshly prepared pizza
+                delivered straight to your doorstep.
+            </p>
+
+            <div class="hero-buttons">
+
+                <button class="primary-btn" id="orderBtn">
+                    Order Now 🍕
+                </button>
+
+                <button class="secondary-btn" id="menuBtn">
+                    View Menu
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-image">
+
+            <div class="pizza-circle">
+                🍕
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CATEGORIES ================= -->
+
+    <section class="categories">
+
+        <div class="section-title">
+
+            <p>EXPLORE</p>
+
+            <h2>Our Categories</h2>
+
+        </div>
+
+
+        <div class="category-container">
+
+            <div class="category-card">
+
+                <div class="category-icon">🍕</div>
+
+                <h3>Pizza</h3>
+
+                <p>Fresh & cheesy pizzas</p>
+
+            </div>
+
+
+            <div class="category-card">
+
+                <div class="category-icon">🍟</div>
+
+                <h3>Sides</h3>
+
+                <p>Perfect pizza companions</p>
+
+            </div>
+
+
+            <div class="category-card">
+
+                <div class="category-icon">🥤</div>
+
+                <h3>Drinks</h3>
+
+                <p>Cool & refreshing drinks</p>
+
+            </div>
+
+
+            <div class="category-card">
+
+                <div class="category-icon">🍰</div>
+
+                <h3>Desserts</h3>
+
+                <p>Sweet ending to your meal</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= POPULAR PIZZA ================= -->
+
+    <section class="popular">
+
+        <div class="section-title">
+
+            <p>OUR MENU</p>
+
+            <h2>Popular Pizzas</h2>
+
+        </div>
+
+
+        <div class="pizza-container">
+
+
+            <!-- Pizza 1 -->
+
+            <div class="pizza-card">
+
+              <div class="pizza-image">
+                    🍕
+                </div>
+
+
+                <div class="pizza-info">
+
+                    <h3>Margherita Pizza</h3>
+
+                    <p>
+                        Classic cheese pizza with
+                        fresh tomato and basil.
+                    </p>
+
+                    <div class="pizza-bottom">
+
+                        <span class="price">₹299</span>
+
+                        <button
+                            class="add-cart"
+                            data-name="Margherita Pizza"
+                            data-price="299">
+                            + Add
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Pizza 2 -->
+
+            <div class="pizza-card">
+
+                <div class="pizza-image">
+                    🍕
+                </div>
+
+                <div class="pizza-info">
+
+                    <h3>Farmhouse Pizza</h3>
+
+                    <p>
+                        Loaded with onion, capsicum,
+                        tomato and cheese.
+                    </p>
+
+                    <div class="pizza-bottom">
+
+                        <span class="price">₹399</span>
+
+                        <button
+                            class="add-cart"
+                            data-name="Farmhouse Pizza"
+                            data-price="399">
+                            + Add
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Pizza 3 -->
+
+            <div class="pizza-card">
+
+                <div class="pizza-image">
+                    🍕
+                </div>
+
+                <div class="pizza-info">
+
+                    <h3>Cheese Burst</h3>
+
+                    <p>
+                        Extra cheesy pizza with
+                        delicious cheese burst.
+                    </p>
+
+                    <div class="pizza-bottom">
+
+                        <span class="price">₹449</span>
+
+                        <button
+                            class="add-cart"
+                            data-name="Cheese Burst"
+                            data-price="449">
+                            + Add
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <button class="view-menu-btn" id="viewMenuBtn">
+            View Full Menu →
+        </button>
+
+    </section>
+
+
+    <!-- ================= OFFER SECTION ================= -->
+
+    <section class="offer">
+
+        <div class="offer-content">
+
+            <p>LIMITED TIME OFFER</p>
+
+            <h2>Get 20% OFF</h2>
+
+            <h3>On Your First Order!</h3>
+
+            <p>
+                Use coupon code:
+                <strong>WELCOME20</strong>
+            </p>
+
+            <button id="offerBtn">
+                Order Now 🍕
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= WHY US ================= -->
+
+    <section class="why-us">
+
+        <div class="section-title">
+
+            <p>WHY CHOOSE US</p>
+
+            <h2>We Make Pizza Better</h2>
+
+        </div>
+
+
+        <div class="features">
+
+            <div class="feature">
+
+                <div>🍕</div>
+
+                <h3>Fresh Ingredients</h3>
+
+                <p>
+                    We use fresh and quality
+                    ingredients.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div>🔥</div>
+
+                <h3>Freshly Baked</h3>
+
+                <p>
+                    Every pizza is prepared
+                    fresh after your order.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div>🛵</div>
+
+                <h3>Fast Delivery</h3>
+
+                <p>
+                    Hot pizza delivered quickly
+                    to your doorstep.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div>⭐</div>
+
+                <h3>Best Quality</h3>
+
+                <p>
+                    Delicious taste with
+                    excellent quality.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div class="footer-column">
+
+                <h2>🍕 PizzaHub</h2>
+
+                <p>
+                    Fresh pizza, fresh happiness.
+                    Order your favourite pizza today!
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Quick Links</h3>
+
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="#">Offers</a>
+                <a href="#">Contact</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Contact</h3>
+
+                <p>📞 +91 9876543210</p>
+                <p>📧 support@pizzahub.com</p>
+                <p>📍 Kolkata, India</p>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 PizzaHub. All Rights Reserved.
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="home.js"></script>
+
+</body>
+
+</html>
+```

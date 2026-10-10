@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Offers - PizzaHub</title>
+
+    <link rel="stylesheet"
+          href="offers.css">
+
+</head>
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <!-- LOGO -->
+
+        <div class="logo">
+            🍕 PizzaHub
+        </div>
+
+
+        <!-- NAV LINKS -->
+
+        <div class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="menu.html">
+                Menu
+            </a>
+
+            <a href="offers.html"
+               class="active">
+                Offers
+            </a>
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+
+        <!-- RIGHT SIDE -->
+
+        <div class="nav-actions">
+
+            <button
+                class="cart-btn"
+                onclick="window.location.href='cart.html'">
+
+                🛒 Cart
+                <span id="cartCount">0</span>
+
+            </button>
+
+
+            <button
+                class="login-btn"
+                onclick="window.location.href='login.html'">
+
+                Login
+
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="offer-hero">
+
+        <p class="small-title">
+            SPECIAL OFFERS
+        </p>
+
+        <h1>
+            Delicious Deals For You 🍕
+        </h1>
+
+        <p>
+            Grab your favourite pizza at an amazing price.
+        </p>
+
+    </section>
+
+
+    <!-- ================= OFFERS ================= -->
+
+    <section class="offers-section">
+
+        <div class="section-heading">
+
+            <h2>
+                Today's Best Offers
+            </h2>
+
+            <p>
+                Don't miss these amazing deals!
+            </p>
+
+        </div>
+
+
+        <div class="offers-grid">
+
+
+            <!-- OFFER 1 -->
+
+            <div class="offer-card">
+
+                <div class="offer-icon">
+                    🍕
+                </div>
+
+                <span class="offer-tag">
+                    20% OFF
+                </span>
+
+                <h3>
+                    Pizza Party
+                </h3>
+
+                <p>
+                    Get 20% off on your favourite
+                    pizzas.
+                </p>
+
+                <div class="coupon-box">
+
+                    <span>
+                        WELCOME20
+                    </span>
+
+                    <button
+                        onclick="copyCoupon('WELCOME20')">
+
+                        Copy
+
+                    </button>
+
+                </div>
+
+                <button
+                    class="order-btn"
+                    onclick="goToMenu()">
+
+                    Order Now
+
+                </button>
+
+            </div>
+
+
+            <!-- OFFER 2 -->
+
+            <div class="offer-card featured">
+
+                <div class="offer-icon">
+                    🎉
+                </div>
+
+                <span class="offer-tag">
+                    BUY 1 GET 1
+                </span>
+
+                <h3>
+                    Pizza Party Deal
+                </h3>
+
+                <p>
+                    Buy one selected pizza and
+                    get another one free.
+                </p>
+
+                <div class="coupon-box">
+
+                    <span>
+                        PIZZA2X1
+                    </span>
+
+                    <button
+                        onclick="copyCoupon('PIZZA2X1')">
+
+                        Copy
+
+                    </button>
+
+                </div>
+
+                <button
+                    class="order-btn"
+                    onclick="goToMenu()">
+
+                    Order Now
+
+                </button>
+
+            </div>
+
+
+            <!-- OFFER 3 -->
+
+            <div class="offer-card">
+
+                <div class="offer-icon">
+                    💰
+                </div>
+
+                <span class="offer-tag">
+                    ₹100 OFF
+                </span>
+
+                <h3>
+                    Big Savings
+                </h3>
+
+                <p>
+                    Get flat ₹100 off on orders
+                    above ₹599.
+                </p>
+
+                <div class="coupon-box">
+
+                    <span>
+                        SAVE100
+                    </span>
+
+                    <button
+                        onclick="copyCoupon('SAVE100')">
+
+                        Copy
+
+                    </button>
+
+                </div>
+
+                <button
+                    class="order-btn"
+                    onclick="goToMenu()">
+
+                    Order Now
+
+                </button>
+
+            </div>
+
+
+            <!-- OFFER 4 -->
+
+            <div class="offer-card">
+
+                <div class="offer-icon">
+                    🚚
+                </div>
+
+                <span class="offer-tag">
+                    FREE DELIVERY
+                </span>
+
+                <h3>
+                    Free Delivery
+                </h3>
+
+                <p>
+                    Enjoy free delivery on orders
+                    above ₹499.
+                </p>
+
+                <div class="coupon-box">
+
+                    <span>
+                        FREEDELIVERY
+                    </span>
+
+                    <button
+                        onclick="copyCoupon('FREEDELIVERY')">
+
+                        Copy
+
+                    </button>
+
+                </div>
+
+                <button
+                    class="order-btn"
+                    onclick="goToMenu()">
+
+                    Order Now
+
+                </button>
+
+            </div>
+
+
+            <!-- OFFER 5 -->
+
+            <div class="offer-card">
+
+                <div class="offer-icon">
+                    🌟
+                </div>
+
+                <span class="offer-tag">
+                    ₹150 OFF
+                </span>
+
+                <h3>
+                    Weekend Special
+                </h3>
+
+                <p>
+                    Get ₹150 off on orders above
+                    ₹799 every weekend.
+                </p>
+
+                <div class="coupon-box">
+
+                    <span>
+                        WEEKEND150
+                    </span>
+
+                    <button
+                        onclick="copyCoupon('WEEKEND150')">
+
+                        Copy
+
+                    </button>
+
+                </div>
+
+                <button
+                    class="order-btn"
+                    onclick="goToMenu()">
+
+                    Order Now
+
+                </button>
+
+            </div>
+
+
+            <!-- OFFER 6 -->
+
+            <div class="offer-card">
+
+                <div class="offer-icon">
+                    ❤️
+                </div>
+
+                <span class="offer-tag">
+                    ₹50 OFF
+                </span>
+
+                <h3>
+                    First Order
+                </h3>
+
+                <p>
+                    New customers can get ₹50 off
+                    on their first order.
+                </p>
+
+                <div class="coupon-box">
+
+                    <span>
+                        FIRST50
+                    </span>
+
+                    <button
+                        onclick="copyCoupon('FIRST50')">
+
+                        Copy
+
+                    </button>
+
+                </div>
+
+                <button
+                    class="order-btn"
+                    onclick="goToMenu()">
+
+                    Order Now
+
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CTA ================= -->
+
+    <section class="offer-cta">
+
+        <h2>
+            Hungry for a Great Deal? 🍕
+        </h2>
+
+        <p>
+            Choose your favourite offer and
+            order your pizza now.
+        </p>
+
+        <button
+            onclick="goToMenu()">
+
+            Explore Menu
+
+        </button>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <h3>
+            🍕 PizzaHub
+        </h3>
+
+        <p>
+            Fresh & Delicious Pizza
+        </p>
+
+        <p>
+            © 2026 PizzaHub. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="offers.js"></script>
+
+</body>
+
+</html>

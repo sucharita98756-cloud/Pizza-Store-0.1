@@ -1,0 +1,635 @@
+/* ================= GENERAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+    background-color: #f8f8f8;
+
+    color: #222;
+}
+
+button {
+    font-family: inherit;
+
+    cursor: pointer;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    height: 75px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background-color: white;
+
+    box-shadow:
+        0 2px 10px rgba(0, 0, 0, 0.08);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+
+    font-weight: bold;
+}
+
+.navbar nav {
+    display: flex;
+
+    gap: 30px;
+}
+
+.navbar nav a {
+    text-decoration: none;
+
+    color: #333;
+
+    font-weight: 500;
+}
+
+.navbar nav a:hover {
+    color: #e63946;
+}
+
+.nav-right button {
+    background-color: white;
+
+    border: 1px solid #ddd;
+
+    border-radius: 20px;
+
+    padding: 9px 15px;
+
+    font-size: 14px;
+}
+
+#cartCount {
+    background-color: #e63946;
+
+    color: white;
+
+    padding: 2px 7px;
+
+    border-radius: 50%;
+
+    font-size: 12px;
+}
+
+
+/* ================= PAGE HEADER ================= */
+
+.page-header {
+    text-align: center;
+
+    padding: 50px 20px;
+
+    background-color: #fff4e6;
+}
+
+.page-header h1 {
+    font-size: 38px;
+
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    color: #666;
+}
+
+
+/* ================= TRACKING CONTAINER ================= */
+
+.tracking-container {
+    max-width: 1100px;
+
+    margin: 40px auto;
+
+    padding: 0 20px;
+}
+
+
+/* ================= NO ORDER ================= */
+
+.no-order {
+    display: none;
+
+    background-color: white;
+
+    text-align: center;
+
+    padding: 70px 20px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 3px 15px rgba(0, 0, 0, 0.07);
+}
+
+.empty-icon {
+    font-size: 70px;
+
+    margin-bottom: 20px;
+}
+
+.no-order h2 {
+    margin-bottom: 10px;
+}
+
+.no-order p {
+    color: #777;
+
+    margin-bottom: 25px;
+}
+
+.no-order button {
+    padding: 12px 25px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: #e63946;
+
+    color: white;
+
+    font-weight: bold;
+}
+
+
+/* ================= ORDER HEADER ================= */
+
+.order-content {
+    display: none;
+}
+
+.order-header {
+    background-color: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    box-shadow:
+        0 3px 15px rgba(0, 0, 0, 0.06);
+
+    margin-bottom: 25px;
+}
+
+.order-header h2 {
+    font-size: 22px;
+
+    margin-bottom: 8px;
+}
+
+.order-header p {
+    color: #777;
+
+    font-size: 13px;
+}
+
+.order-total {
+    text-align: right;
+}
+
+.order-total span {
+    display: block;
+
+    color: #777;
+
+    font-size: 13px;
+
+    margin-bottom: 5px;
+}
+
+.order-total strong {
+    font-size: 24px;
+
+    color: #e63946;
+}
+
+
+/* ================= STATUS BOX ================= */
+
+.status-box {
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 3px 15px rgba(0, 0, 0, 0.06);
+
+    margin-bottom: 25px;
+}
+
+.status-box h2 {
+    margin-bottom: 35px;
+
+    text-align: center;
+}
+
+
+/* ================= STATUS TRACKER ================= */
+
+.status-tracker {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: center;
+}
+
+.status-step {
+    width: 180px;
+
+    text-align: center;
+
+    position: relative;
+}
+
+.status-circle {
+    width: 55px;
+
+    height: 55px;
+
+    margin: 0 auto 12px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background-color: #eee;
+
+    color: #999;
+
+    font-size: 22px;
+}
+
+.status-step.active .status-circle {
+    background-color: #e63946;
+
+    color: white;
+}
+
+.status-step h3 {
+    font-size: 14px;
+
+    margin-bottom: 7px;
+}
+
+.status-step p {
+    color: #888;
+
+    font-size: 11px;
+
+    line-height: 1.4;
+}
+
+.status-step.active h3 {
+    color: #e63946;
+}
+
+.status-line {
+    height: 4px;
+
+    width: 80px;
+
+    background-color: #ddd;
+
+    margin-top: 26px;
+
+    border-radius: 5px;
+}
+
+.status-line.active {
+    background-color: #e63946;
+}
+
+
+/* ================= DETAILS GRID ================= */
+
+.tracking-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+
+    margin-bottom: 25px;
+}
+
+.details-box {
+    background-color: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 3px 15px rgba(0, 0, 0, 0.06);
+}
+
+.details-box h2 {
+    font-size: 19px;
+
+    margin-bottom: 20px;
+}
+
+
+/* ================= DETAILS ================= */
+
+.detail-item {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 13px 0;
+
+    border-bottom: 1px solid #eee;
+
+    font-size: 14px;
+}
+
+.detail-item:last-child {
+    border-bottom: none;
+}
+
+.detail-item strong {
+    color: #555;
+}
+
+.detail-item span {
+    text-align: right;
+
+    color: #333;
+}
+
+
+/* ================= ORDER ITEM ================= */
+
+.tracking-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #eee;
+}
+
+.tracking-item:last-child {
+    border-bottom: none;
+}
+
+.item-image {
+    width: 48px;
+
+    height: 48px;
+
+    background-color: #fff4e6;
+
+    border-radius: 8px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 25px;
+}
+
+.item-info {
+    flex: 1;
+}
+
+.item-info h4 {
+    font-size: 13px;
+
+    margin-bottom: 5px;
+}
+
+.item-info p {
+    color: #888;
+
+    font-size: 11px;
+}
+
+.item-price {
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+/* ================= ACTIONS ================= */
+
+.actions {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+.primary-btn,
+.secondary-btn {
+    padding: 13px 25px;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    font-size: 14px;
+}
+
+.primary-btn {
+    border: none;
+
+    background-color: #e63946;
+
+    color: white;
+}
+
+.primary-btn:hover {
+    background-color: #c92f3c;
+}
+
+.secondary-btn {
+    border: 1px solid #ddd;
+
+    background-color: white;
+
+    color: #333;
+}
+
+.secondary-btn:hover {
+    background-color: #f3f3f3;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background-color: #222;
+
+    color: white;
+
+    margin-top: 70px;
+}
+
+.footer-content {
+    padding: 50px 8%;
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr;
+
+    gap: 40px;
+}
+
+.footer-content h2,
+.footer-content h3 {
+    margin-bottom: 18px;
+}
+
+.footer-content p {
+    color: #bbb;
+
+    margin-bottom: 10px;
+
+    line-height: 1.6;
+}
+
+.footer-content a {
+    display: block;
+
+    color: #bbb;
+
+    text-decoration: none;
+
+    margin-bottom: 10px;
+}
+
+.copyright {
+    border-top: 1px solid #444;
+
+    text-align: center;
+
+    padding: 20px;
+
+    color: #aaa;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+    .navbar nav {
+        display: none;
+    }
+
+    .tracking-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .status-line {
+        width: 40px;
+    }
+
+    .status-step {
+        width: 150px;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .tracking-container {
+        padding: 0 12px;
+    }
+
+    .order-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+    }
+
+    .order-total {
+        text-align: left;
+    }
+
+    .status-tracker {
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 0;
+    }
+
+    .status-step {
+        width: 100%;
+
+        margin-bottom: 5px;
+    }
+
+    .status-line {
+        width: 4px;
+
+        height: 35px;
+
+        margin: 0;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        width: 100%;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}
