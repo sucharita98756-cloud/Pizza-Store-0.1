@@ -92,8 +92,7 @@ Add screenshots of your website here to showcase the design.
 
 🌐 Live Demo
 
-Live Website: Add your deployed website URL here.
-
+Live Website: https://sucharita98756-cloud.github.io/Pizza-Store-0.1/
 👨‍💻 Author
 
 Your Name
