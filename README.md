@@ -50,7 +50,7 @@ Follow these steps to run the project locally.
 
 1. Clone the Repository
 
-git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
+git clone https://github.com/sucharita98756-cloud/Pizza-Store-0.1.git
 
 2. Open the Project
 
